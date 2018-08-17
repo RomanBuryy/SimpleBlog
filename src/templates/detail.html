@@ -7,4 +7,10 @@
     <h2>{{batman.title}}</h2>
     <p>{{batman.text}}</p>
   </div>
+
+
+  <div class="">
+    <a class="btn btn-primary" href="{% url 'article_edit' batman.pk %}" role="button">Edit this post</a>
+  </div>
+
 {% endblock content %}
