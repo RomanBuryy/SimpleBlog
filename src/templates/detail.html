@@ -3,14 +3,29 @@
 
 
 {% block content %}
-  <div class="details">
-    <h2>{{batman.title}}</h2>
-    <p>{{batman.text}}</p>
-  </div>
 
 
-  <div class="">
-    <a class="btn btn-primary" href="{% url 'article_edit' batman.pk %}" role="button">Edit this post</a>
+
+<div class="row">
+
+  <div class="col-12">
+
+
+
+  <div class="card">
+
+    <div class="card-body">
+      <h2>{{batman.title}}</h2>
+      <p class="card-text">{{batman.text}}</p>
+      <a class="btn btn-primary" href="{% url 'article_edit' batman.pk %}" role="button">Edit this post</a>
+      <a class="btn btn-danger" href="{% url 'article_delete' batman.pk %}" role="button">Delete this post</a>
+    </div>
   </div>
+
+  </div>
+
+</div>
+
+
 
 {% endblock content %}

@@ -5,11 +5,16 @@
 
   <h2>This is Edit Page</h2>
 
-  <form class="" action="" method="post">
+
+
+  <form class="form-group" action="" method="post">
+
+
+
     {% csrf_token %}
     {{form.as_p}}
 
-    <input type="submit" value="Update">
+    <input class="btn btn-success"type="submit" value="Update">
 
   </form>
 

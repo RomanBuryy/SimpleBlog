@@ -3,10 +3,31 @@
 
 {% block content %}
   {% for art in object_list %}
-    <div class="article">
-      
-      <h3> <a href="{% url 'article_page' art.pk %}">{{ art.title  }}</a> </h3>
-      <p>{{ art.text }}</p>
+<div class="row">
+  <div class="col">
+     
+   </div>
+
+
+   <div class="col-6">
+
+    <div class="card">
+      <div class="card-body">
+
+
+
+      <h3 class="card-title"> <a href="{% url 'article_page' art.pk %}">{{ art.title  }}</a> </h3>
+      <p class="card-text">{{ art.text }}</p>
+
+      </div>
     </div>
+
+</div>
+
+<div class="col">
+
+ </div>
+
+</div>
   {% endfor %}
 {% endblock content %}
